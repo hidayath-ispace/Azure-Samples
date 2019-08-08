@@ -24,7 +24,7 @@
   <!-- bluebird only needed if this page needs to run on Internet Explorer -->
   <!-- msal.min.js can be used in the place of msal.js; included msal.js to make debug easy -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js" class="pre"></script>
-  <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/msal.js"></script>
+  <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.1.1/js/msal.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" class="pre"></script>
 
   <h2>Getting an access token with Azure AD B2C and calling a Web API</h2>
@@ -40,10 +40,17 @@
 
     // The current application coordinates were pre-registered in a B2C tenant.
     var appConfig = {
-      b2cScopes: ["https://fabrikamb2c.onmicrosoft.com/helloapi/demo.read"],
-      webApi: "https://fabrikamb2chello.azurewebsites.net/hello"
+      b2cScopes: ["https://kostasad.onmicrosoft.com/hello/demo.read"],
+      // TODO: Do this later?
+      // webApi: "https://fabrikamb2chello.azurewebsites.net/hello"
     };
+  
+    
+  
   </script>
+
+  
+
 
   <script>
     "use strict";
@@ -51,8 +58,8 @@
     // configuration to initialize msal
     var msalConfig = {
         auth: {
-            clientId: "e760cab2-b9a1-4c0d-86fb-ff7084abd902", //This is your client ID
-            authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_susi", //This is your tenant info
+            clientId: "12ba77f8-e96c-4157-bf58-25b11b45fbc2", //This is your client ID
+            authority: "https://kostasad.b2clogin.com/7d252d0e-2796-45be-ad20-60c90851a301/B2C_1_susiv2_msal", //This is your tenant info
             validateAuthority: false
         },
         cache: {
